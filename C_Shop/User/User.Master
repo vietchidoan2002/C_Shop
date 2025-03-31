@@ -23,8 +23,26 @@
    <!-- Libraries Stylesheet -->
    <link href="../UserTemplate/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
    <!-- Customized Bootstrap Stylesheet -->
    <link href="../UserTemplate/css/style.css" rel="stylesheet">
+
+    <script>
+        $(function () {
+            // this will get the full URL at the adress
+            var url = window.location.href;
+            //passes on every "a" tag
+            $("#navbarCollapse").each(fuction(){
+                // checks if its the same on the address bar
+                if(url == (this.href)) {
+                $(this).addClass("active");
+                }
+            });
+
+        } );
+    </script>
+
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -118,7 +136,7 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
-                            <a href="Default.aspx" class="nav-item nav-link active">Home</a>
+                            <a href="Default.aspx" class="nav-item nav-link">Home</a>
                             <a href="Shop.aspx" class="nav-item nav-link">Shop</a>
                             <a href="ShopDetail.aspx" class="nav-item nav-link">Shop Detail</a>
                             <div class="nav-item dropdown">
@@ -161,25 +179,25 @@
                     <div class="col-md-4 mb-5">
                         <h5 class="font-weight-bold text-dark mb-4">Quick Links</h5>
                         <div class="d-flex flex-column justify-content-start">
-                            <a class="text-dark mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                            <a class="text-dark mb-2" href="shop.html"><i class="fa fa-angle-right mr-2"></i>Our Shop</a>
-                            <a class="text-dark mb-2" href="detail.html"><i class="fa fa-angle-right mr-2"></i>Shop Detail</a>
-                            <a class="text-dark mb-2" href="cart.html"><i class="fa fa-angle-right mr-2"></i>Shopping Cart</a>
-                            <a class="text-dark mb-2" href="checkout.html"><i class="fa fa-angle-right mr-2"></i>Checkout</a>
-                            <a class="text-dark" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                            <a class="text-dark mb-2" href="Default.aspx"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                            <a class="text-dark mb-2" href="Shop.aspx"><i class="fa fa-angle-right mr-2"></i>Our Shop</a>
+                            <a class="text-dark mb-2" href="ShopDetail.aspx"><i class="fa fa-angle-right mr-2"></i>Shop Detail</a>
+                            <a class="text-dark mb-2" href="Cart.aspx"><i class="fa fa-angle-right mr-2"></i>Shopping Cart</a>
+                            <a class="text-dark mb-2" href="Checkout.aspx"><i class="fa fa-angle-right mr-2"></i>Checkout</a>
+                            <a class="text-dark" href="Contact.aspx"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
                         </div>
                     </div>
                     <div class="col-md-4 mb-5">
-                        <h5 class="font-weight-bold text-dark mb-4">Quick Links</h5>
-                        <div class="d-flex flex-column justify-content-start">
-                            <a class="text-dark mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                            <a class="text-dark mb-2" href="shop.html"><i class="fa fa-angle-right mr-2"></i>Our Shop</a>
-                            <a class="text-dark mb-2" href="detail.html"><i class="fa fa-angle-right mr-2"></i>Shop Detail</a>
-                            <a class="text-dark mb-2" href="cart.html"><i class="fa fa-angle-right mr-2"></i>Shopping Cart</a>
-                            <a class="text-dark mb-2" href="checkout.html"><i class="fa fa-angle-right mr-2"></i>Checkout</a>
-                            <a class="text-dark" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
-                        </div>
-                    </div>
+                <h5 class="font-weight-bold text-dark mb-4">Quick Links</h5>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-dark mb-2" href="Default.aspx"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                    <a class="text-dark mb-2" href="Shop.aspx"><i class="fa fa-angle-right mr-2"></i>Our Shop</a>
+                    <a class="text-dark mb-2" href="ShopDetail.aspx"><i class="fa fa-angle-right mr-2"></i>Shop Detail</a>
+                    <a class="text-dark mb-2" href="Cart.aspx"><i class="fa fa-angle-right mr-2"></i>Shopping Cart</a>
+                    <a class="text-dark mb-2" href="Checkout.aspx"><i class="fa fa-angle-right mr-2"></i>Checkout</a>
+                    <a class="text-dark" href="Contact.aspx"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                </div>
+            </div>
                     <div class="col-md-4 mb-5">
                         <h5 class="font-weight-bold text-dark mb-4">Newsletter</h5>
                         <form action="">
